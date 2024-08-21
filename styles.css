@@ -4,7 +4,7 @@
   --primary-text-color: #E0E0E0;
   --secondary-text-color: #B3B3B3;
   --tertiary-text-color: #8A8A8A;
-  --accent-color: #03DAC6;
+  --accent-color: #007e72;
   --border-color: #3C3C3C;
   --error-color: #CF6679;
   --success-color: #03DAC5;
@@ -12,6 +12,7 @@
 
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -21,8 +22,7 @@ body {
 
 .nav-container {
   position: fixed;
-  top: 13%;
-  left: 25%;
+  top: 10%;
   width: 50vw;
   height: 3vh;
 }
@@ -38,7 +38,7 @@ nav {
 
 nav a {
   font-family: 'REM', sans-serif;
-  font-size: 1em;
+  font-size: .8em;
   color: var(--primary-text-color);
   text-decoration: none;
   position: relative;
@@ -56,6 +56,7 @@ nav .animation{
   border-radius: 8px;
 	transition: all .5s ease 0s;
 }
+
 nav a:nth-child(1){
 	width: 30%;
 }
@@ -79,6 +80,7 @@ nav a:nth-child(3):hover~.animation{
 }
 
 .container {
+  overflow: hidden;
   position: relative;
   width: 90vw;
   height: 50vh;
@@ -135,6 +137,7 @@ nav a:nth-child(3):hover~.animation{
 }
 
 .vertical-rectangle-below-25 {
+  background-color: var(--accent-color);
   width: 29%;
   height: 14%;
   top: 25%;
@@ -157,26 +160,24 @@ nav a:nth-child(3):hover~.animation{
   color: var(--primary-text-color);
   font-weight: bold;
   font-size: .9em;
-  top: 5%;
-  left: 2%;
+  top: 3%;
+  left: 5%;
 }
 
-.icon-container {
+.icon-grid {
   position: inherit;
+  top: 25%;
   display: grid;
-  gap: 2%;
-  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-  aspect-ratio: 1/1;
-  width: 100%;
-  height: 40%;
-  top: 30%;
-  left: 2%;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  gap: 5%;
+  justify-items: center;
+  align-items: center;
+  padding: 5%;
 }
 
-.icon-container img {
+.icon img {
   width: 100%;
   height: auto;
-  object-fit: cover;
 }
 
 .vertical-rectangle-below-25 span{
@@ -385,7 +386,7 @@ nav a:nth-child(3):hover~.animation{
   top: 0%;
   left: 50%;
   opacity: 0;
-  animation: slideIn .8s ease-out 0.2s forwards;
+  animation: slideIn .8s ease-out 0.1s forwards;
 }
 
 .contact-box {
@@ -397,6 +398,13 @@ nav a:nth-child(3):hover~.animation{
 }
 
 @media (min-width: 1440px) {
+
+  .nav-container {
+    top: 10%;
+    width: 10vw;
+    height: 3vh;
+  }
+
   .container {
     width: 30vw;
     height: 60vh;
@@ -407,6 +415,15 @@ nav a:nth-child(3):hover~.animation{
     height: 29%;
     top: 0;
     left: 0;
+  }
+
+  .horizontal-rectangle h3 {
+    top: 0;
+  }
+  
+  .horizontal-rectangle span {
+    font-size: 1em;
+    left: 5%;
   }
 
   .vertical-rectangle-right {
@@ -430,11 +447,24 @@ nav a:nth-child(3):hover~.animation{
     left: 0;
   }
 
+  .vertical-rectangle-below-25 span{
+    position: inherit;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    top: 30%;
+    left: 0;
+  }
+
   .vertical-rectangle-below {
     width: 29%;
     height: 50%;
     top: 50%;
     left: 0;
+  }
+
+  .vertical-rectangle-below span{
+    font-size: 1.2em;
   }
 
   .horizontal-rectangle-right {
@@ -450,12 +480,40 @@ nav a:nth-child(3):hover~.animation{
     top: 30%;
     left: 30%;
   }
+
+  .center-square h1 {
+    position: inherit;
+    color: var(--accent-color);
+    font-size: 1.5em;
+    top: 65%;
+    left: 25%;
+  }
+
+  .circle-container {
+    width: 50%; 
+    height: 50%;
+    overflow: hidden; 
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    position: relative; 
+    left: 25%;
+    top: 15%;
+  }
+  
+  /* .circle-container img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    object-position: 70% 5%;
+  } */
 }
 
 @keyframes slideIn {
   0% {
     opacity: 0;
-    transform: translateX(-20%);
+    transform: translateX(-50%);
   }
   100% {
     opacity: 1;
@@ -466,7 +524,7 @@ nav a:nth-child(3):hover~.animation{
 @keyframes slideOut {
   0% {
     opacity: 0;
-    transform: translateX(20%);
+    transform: translateX(50%);
   }
   100% {
     opacity: 1;
@@ -477,7 +535,7 @@ nav a:nth-child(3):hover~.animation{
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(-20%);
+    transform: translateY(-50%);
   }
   100% {
     opacity: 1;
@@ -488,7 +546,7 @@ nav a:nth-child(3):hover~.animation{
 @keyframes fadeOut {
   0% {
     opacity: 0;
-    transform: translateY(20%);
+    transform: translateY(50%);
   }
   100% {
     opacity: 1;
