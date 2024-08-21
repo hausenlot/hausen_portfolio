@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loen Tinkerer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="nav-container">
+    <nav>
+      <a href="#" onclick="navigateTo('home')">Home</a>
+      <a href="#" onclick="navigateTo('project')">Project</a>
+      <a href="#" onclick="navigateTo('contact')">Contact</a>
+      <div class="animation start-home"></div>
+    </nav>
+  </div>
+  <div id="home" class="container">
+      <div class="horizontal-rectangle">
+        <h3>A bit of me</h3>
+        <span>Hello! I'm Paul John Sopranes from Philippines, I call my self a Full Stack Developer. I'm an Undergraduate and self taught, it rough here but its fun.</span>
+      </div>
+      <div class="vertical-rectangle-right">
+        <video id="background-video" autoplay muted loop playsinline>
+          <source src="assets/road.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="vertical-rectangle-right-25">
+        <span>There is a long road ahead but I'll get there.</span>
+      </div>
+      <div class="vertical-rectangle-below-25">
+        <span>Junior Full Stack Developer</span>
+      </div>
+      <div class="vertical-rectangle-below">
+        <span>Technologies I have worked with:</span>
+        <div class="icon-container">
+          <img src="assets/rails.jpg" alt="Circular Image">
+          <img src="assets/mysql.png" alt="Circular Image">
+          <img src="assets/html5.png" alt="Circular Image">
+          <img src="assets/css3-t.png" alt="Circular Image">
+          <img src="assets/js.png" alt="Circular Image">
+        </div>
+      </div>
+      <div class="horizontal-rectangle-right">
+        <h3>Experience:</h3>
+        <h4>Computer Programmer III</h4>
+        <p id="p1">City Govt. of Paranaque Human Resources Mgmt. Office</p>
+        <p id="p2">2021-2024</p>
+        <p id="p3">One of developers of HRMIS WebApp made mostly using <span class="highlight">Rails 5</span> and <span class="highlight">MySQL</span></p>
+      </div>
+      <div class="center-square">
+        <div class="circle-container">
+          <img src="assets/pic.jpg" alt="Circular Image">
+        </div>
+        <h1>Paul John</h1>
+      </div>
+  </div>
+  <div id="project" class="container" style="display: none;">
+    <div class="project-1">Project 1 Thumbnail</div>
+    <div class="project-1-description">Project 1 Discription</div>
+    <div class="project-1-link">Click me!</div>
+    <div class="project-2">Project 2 Thumbnail</div>
+    <div class="project-2-description">Project 2 Discription</div>
+    <div class="project-2-link">Click me!</div>
+  </div>
+  <div id="contact" class="container" style="display: none;">
+    <div class="email-box">Email</div>
+    <div class="repo-box">Repo</div>
+    <div class="social-box">Social</div>
+    <div class="contact-box">Contact</div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
+
+<!-- PROGRESS -->
+<!-- DAY ONE 08/20/2024 1:32:41 PM  TO 10:49:20 PM-->
+<!-- DAY TWO 08/21/2024 6:01:21 PM  TO -->
