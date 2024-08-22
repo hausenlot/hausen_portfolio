@@ -1,6 +1,7 @@
 :root {
   --background-color: #000000;
   --surface-color: #333333;
+  --accent-surface-color: #5b5b5b;
   --primary-text-color: #E0E0E0;
   --secondary-text-color: #B3B3B3;
   --tertiary-text-color: #8A8A8A;
@@ -67,16 +68,8 @@ nav .start-home, a:nth-child(1):hover~.animation{
 nav a:nth-child(2){
 	width: 30%;
 }
-nav a:nth-child(2):hover~.animation{
-	width: 30%;
-	left: 35%;
-}
 nav a:nth-child(3){
 	width: 30%;
-}
-nav a:nth-child(3):hover~.animation{
-	width: 30%;
-	left: 65%;
 }
 
 .container {
@@ -95,7 +88,7 @@ nav a:nth-child(3):hover~.animation{
 .center-square,
 .project-1, .project-1-description, .project-1-link,
 .project-2, .project-2-description, .project-2-link,
-.email-box, .repo-box, .social-box, .contact-box{
+.contact-list-box, .repo-box, .social-box{
   position: absolute;
   border-radius: 15px;
   background-color: var(--surface-color);
@@ -103,13 +96,13 @@ nav a:nth-child(3):hover~.animation{
 }
 
 .horizontal-rectangle span,
-.vertical-rectangle-right span,
 .vertical-rectangle-right-25 span,
 .vertical-rectangle-below-25 span,
 .vertical-rectangle-below span,
-.horizontal-rectangle-right span ,
-.center-square span {
+.contact-list-box,
+.repo-box span {
   font-size: 1em;
+  color: var(--primary-text-color);
 }
 
 .horizontal-rectangle {
@@ -157,7 +150,6 @@ nav a:nth-child(3):hover~.animation{
 
 .vertical-rectangle-below span{
   position: inherit;
-  color: var(--primary-text-color);
   font-weight: bold;
   font-size: .9em;
   top: 3%;
@@ -182,7 +174,6 @@ nav a:nth-child(3):hover~.animation{
 
 .vertical-rectangle-below-25 span{
   position: inherit;
-  color: var(--primary-text-color);
   font-size: 0.9em;
   font-weight: bold;
   top: 5%;
@@ -219,7 +210,6 @@ nav a:nth-child(3):hover~.animation{
 
 .vertical-rectangle-right-25 span{
   position: inherit;
-  color: var(--primary-text-color);
   font-size: 0.9em;
   font-weight: bold;
   top: 15%;
@@ -267,6 +257,7 @@ nav a:nth-child(3):hover~.animation{
   top: 45%;
   left: 3%;
 }
+
 .horizontal-rectangle-right #p3{
   color: var(--secondary-text-color);
   position: inherit;
@@ -279,7 +270,6 @@ nav a:nth-child(3):hover~.animation{
   font-weight: bold;
   color: var(--primary-text-color);
 }
-
 
 .center-square {
   top: 25%;
@@ -324,19 +314,23 @@ nav a:nth-child(3):hover~.animation{
   opacity: 0;
   animation: popOut 1s ease-out 0.1s forwards;
 }
+
 .project-1-description {
   width: 50%;
   height: 37.5%;
   top: 0;
   left: 50%;
   opacity: 0;
-  animation: fadeIn 1s ease-out 0.15s forwards;
+  animation: fadeIn .5s ease-out 0.15s forwards;
 }
+
 .project-1-link {
   width: 50%;
   height: 9%;
   top: 38.5%;
   left: 50%;
+  opacity: 0;
+  animation: fadeIn .5s ease-out .5s forwards;
 }
 
 .project-2 {
@@ -347,22 +341,30 @@ nav a:nth-child(3):hover~.animation{
   opacity: 0;
   animation: popOut 1s ease-out 0.1s forwards;
 }
+
 .project-2-description {
   width: 50%;
   height: 37.5%;
   top: 50%;
   left: 50%;
   opacity: 0;
-  animation: fadeIn 1s ease-out 0.15S forwards;
+  animation: fadeIn .5s ease-out 0.15S forwards;
 }
+
 .project-2-link {
   width: 50%;
   height: 9%;
   top: 88.5%;
   left: 50%;
+  opacity: 0;
+  animation: fadeIn .5s ease-out .5s forwards;
 }
 
-.email-box {
+.contact-list-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 49%;
   height: 24%;
   top: 0;
@@ -372,6 +374,10 @@ nav a:nth-child(3):hover~.animation{
 }
 
 .repo-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 49%;
   height: 24%;
   top: 25%;
@@ -380,7 +386,30 @@ nav a:nth-child(3):hover~.animation{
   animation: fadeIn .8s ease-out .5s forwards;
 }
 
+.repo-box a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.repo-box img {
+  width: 50px;
+  height: auto;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+.repo-box span {
+  margin-top: 5%;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
 .social-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 50%;
   height: 49%;
   top: 0%;
@@ -389,12 +418,79 @@ nav a:nth-child(3):hover~.animation{
   animation: slideIn .8s ease-out 0.1s forwards;
 }
 
-.contact-box {
+.social-box a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.social-box img {
+  width: 50px;
+  height: auto;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+.contact-me-box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 50%;
   top: 50%;
   opacity: 0;
   animation: fadeOut .8s ease-out .5s forwards;
+  color: var(--primary-text-color);
+  font-family: 'REM', sans-serif;
+}
+
+.contact-me-box h3 {
+  position: relative;
+  top: -5%;
+}
+
+.form-box {
+  position: relative;
+  top: -10%;
+}
+
+.form-box input{
+  color: var(--primary-text-color);
+  background-color: var(--surface-color);
+  width: 100%;
+  height: 15%;
+  margin-bottom: 1%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding-left: 2%;
+}
+
+.form-box textarea{
+  color: var(--primary-text-color);
+  background-color: var(--surface-color);
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  resize: none;
+  padding-left: 2%;
+}
+
+.form-box button{
+  color: var(--primary-text-color);
+  background-color: var(--surface-color);
+  width: 100%;
+  height: 19%;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+.form-box button:hover {
+  background-color: var(--accent-color)
 }
 
 @media (min-width: 1440px) {
@@ -438,6 +534,13 @@ nav a:nth-child(3):hover~.animation{
     height: 20%;
     top: 50%;
     right: 0;
+  }
+
+  .vertical-rectangle-right-25 span{
+    font-size: 1em;
+    font-weight: bold;
+    top: 25%;
+    right: 5%;
   }
 
   .vertical-rectangle-below-25 {
