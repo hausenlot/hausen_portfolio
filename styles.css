@@ -308,11 +308,21 @@ nav a:nth-child(3){
 
 .project-1 {
   width: 49%;
-  height: 47.5%;
+  height: 0;
+  padding-top: 47.5%;
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  animation: popOut 1s ease-out 0.1s forwards;
+}
+
+.project-1 img {
+  position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
-  animation: popOut 1s ease-out 0.1s forwards;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .project-1-description {
@@ -324,13 +334,48 @@ nav a:nth-child(3){
   animation: fadeIn .5s ease-out 0.15s forwards;
 }
 
+.content{
+  margin: 5%;
+  margin: 5%;
+  top: 60%;
+  left: 3%;
+}
+
+.project-1-description h2{
+  color: var(--primary-text-color);
+  font-size: 1em;
+
+}
+
+.project-1-description p{
+  color: var(--secondary-text-color);
+  font-size: .85em;
+}
+
 .project-1-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 50%;
   height: 9%;
   top: 38.5%;
   left: 50%;
   opacity: 0;
   animation: fadeIn .5s ease-out .5s forwards;
+}
+
+.project-1-link a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.project-1-link img {
+  width: 20px;
+  height: auto;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 
 .project-2 {
