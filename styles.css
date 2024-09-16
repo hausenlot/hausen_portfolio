@@ -114,6 +114,19 @@ nav a:nth-child(3){
   animation: slideIn 1s ease-out 0s forwards;
 }
 
+.download-link {
+  position: absolute;
+  top: 70%;
+  left: 5%;
+  width: 100%;
+  display: block;
+  text-decoration: none;
+}
+.download-link p {
+  font-weight: bold;
+  color: var(--primary-text-color);
+}
+
 .horizontal-rectangle h3 {
   position: inherit;
   color: var(--primary-text-color);
@@ -344,7 +357,10 @@ nav a:nth-child(3){
 .project-1-description h2{
   color: var(--primary-text-color);
   font-size: 1em;
+}
 
+.project-1-description a{
+  text-decoration: none;
 }
 
 .project-1-description p{
@@ -387,6 +403,15 @@ nav a:nth-child(3){
   animation: popOut 1s ease-out 0.1s forwards;
 }
 
+.project-2 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .project-2-description {
   width: 50%;
   height: 37.5%;
@@ -396,13 +421,37 @@ nav a:nth-child(3){
   animation: fadeIn .5s ease-out 0.15S forwards;
 }
 
+.project-2-description h2{
+  color: var(--primary-text-color);
+  font-size: 1em;
+}
+
+.project-2-description a{
+  text-decoration: none;
+}
+
+.project-2-description p{
+  color: var(--secondary-text-color);
+  font-size: .85em;
+}
+
 .project-2-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 50%;
   height: 9%;
   top: 88.5%;
   left: 50%;
   opacity: 0;
   animation: fadeIn .5s ease-out .5s forwards;
+}
+
+.project-2-link img {
+  width: 20px;
+  height: auto;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 
 .contact-list-box {
