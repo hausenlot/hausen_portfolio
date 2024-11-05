@@ -63,4 +63,4 @@ buttons.forEach(button => {
   });
 });
 
-showContainer('project-container');
+showContainer('home-container');
