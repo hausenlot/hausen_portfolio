@@ -1,4 +1,15 @@
+
 import React from 'react';
+import cvPdf from '/assets/CV_NOV_24.pdf'
+import roadMp4 from '/assets/road.mp4'
+import railsSvg from '/assets/rails.svg'
+import mysqlSvg from '/assets/mysql.svg'
+import jsSvg from '/assets/js.svg'
+import html5Svg from '/assets/html5.svg'
+import css3Svg from '/assets/css3.svg'
+import tailwindSvg from '/assets/tailwind.svg'
+import picJpg from '/assets/pic.jpg'
+
 
 const Home = () => {
     return (
@@ -12,7 +23,7 @@ const Home = () => {
                     <p className="font-thin text-sm mt-1 md:text-md sm:hidden ">
                         I call myself a Full-stack developer. I kinda wannabe one.
                     </p>
-                    <a href="/assets/CV_NOV_24.pdf" download className="absolute bottom-5 hidden md:block">
+                    <a href={cvPdf} download className="absolute bottom-5 hidden md:block">
                         <p>Download My Resume</p>
                     </a>
                 </div>
@@ -25,7 +36,7 @@ const Home = () => {
                     playsInline
                     className="absolute inset-0 w-full h-full object-cover rounded-lg"
                 >
-                    <source src="/assets/road.mp4" type="video/mp4" />
+                    <source src={roadMp4} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -59,37 +70,37 @@ const Home = () => {
                     <span className="text-xs font-bold hidden">Techs I use:</span>
                     <div className="icon-container gap-0.5">
                         <div className="icon-wrapper">
-                            <img src="/assets/rails.svg" alt="rails icon" className="icon w-5 h-auto" />
+                            <img src={railsSvg} alt="rails icon" className="icon w-5 h-auto" />
                         </div>
                         <div className="text-wrapper">
                             <span className="text-[0.60rem]">Rails</span>
                         </div>
                         <div className="icon-wrapper">
-                            <img src="/assets/mysql.svg" alt="mysql icon" className="icon w-5 h-auto" />
+                            <img src={mysqlSvg} alt="mysql icon" className="icon w-5 h-auto" />
                         </div>
                         <div className="text-wrapper">
                             <span className="text-[0.60rem]">MySQL</span>
                         </div>
                         <div className="icon-wrapper">
-                            <img src="/assets/js.svg" alt="javascript icon" className="icon w-5 h-auto" />
+                            <img src={jsSvg} alt="javascript icon" className="icon w-5 h-auto" />
                         </div>
                         <div className="text-wrapper">
                             <span className="text-[0.50rem]">JavaScript</span>
                         </div>
                         <div className="icon-wrapper">
-                            <img src="/assets/html5.svg" alt="html icon" className="icon w-5 h-auto" />
+                            <img src={html5Svg} alt="html icon" className="icon w-5 h-auto" />
                         </div>
                         <div className="text-wrapper">
                             <span className="text-[0.60rem]">HTML5</span>
                         </div>
                         <div className="icon-wrapper">
-                            <img src="/assets/css3.svg" alt="css icon" className="icon w-5 h-auto" />
+                            <img src={css3Svg} alt="css icon" className="icon w-5 h-auto" />
                         </div>
                         <div className="text-wrapper">
                             <span className="text-[0.60rem]">CSS3</span>
                         </div>
                         <div className="icon-wrapper">
-                            <img src="/assets/tailwind.svg" alt="tailwind icon" className="icon w-5 h-auto" />
+                            <img src={tailwindSvg} alt="tailwind icon" className="icon w-5 h-auto" />
                         </div>
                         <div className="text-wrapper">
                             <span className="text-[0.60rem]">Tailwind</span>
@@ -100,22 +111,22 @@ const Home = () => {
                     <span className="text-base font-bold">Technologies I work with:</span>
                     <div className="icon-container gap-2">
                         <div className="icon-wrapper">
-                            <img src="/assets/rails.svg" alt="rails icon" className="icon w-10 h-auto" />
+                            <img src={railsSvg} alt="rails icon" className="icon w-10 h-auto" />
                         </div>
                         <div className="icon-wrapper">
-                            <img src="/assets/mysql.svg" alt="mysql icon" className="icon w-10 h-auto" />
+                            <img src={mysqlSvg} alt="mysql icon" className="icon w-10 h-auto" />
                         </div>
                         <div className="icon-wrapper">
-                            <img src="/assets/js.svg" alt="javascript icon" className="icon w-10 h-auto" />
+                            <img src={jsSvg} alt="javascript icon" className="icon w-10 h-auto" />
                         </div>
                         <div className="icon-wrapper">
-                            <img src="/assets/html5.svg" alt="html icon" className="icon w-10 h-auto" />
+                            <img src={html5Svg} alt="html icon" className="icon w-10 h-auto" />
                         </div>
                         <div className="icon-wrapper">
-                            <img src="/assets/css3.svg" alt="css icon" className="icon w-10 h-auto" />
+                            <img src={css3Svg} alt="css icon" className="icon w-10 h-auto" />
                         </div>
                         <div className="icon-wrapper">
-                            <img src="/assets/tailwind.svg" alt="tailwind icon" className="icon w-10 h-auto" />
+                            <img src={tailwindSvg} alt="tailwind icon" className="icon w-10 h-auto" />
                         </div>
                     </div>
                 </div>
@@ -128,7 +139,7 @@ const Home = () => {
             <div className="box box-7">  {/* Picture */}
                 <div className="box-container flex flex-col items-center justify-center space-y-2">
                     <div className="overflow-hidden rounded-full w-16 h-16 md:w-40 md:h-40 flex items-center justify-center">
-                        <img src="/assets/pic.jpg" alt="its my face" className="w-full h-full object-cover object-[70%_5%]" />
+                        <img src={picJpg} alt="its my face" className="w-full h-full object-cover object-[70%_5%]" />
                     </div>
                     <span className="text-center text-lg md:text-2xl font-semibold md:font-bold">Paul John</span>
                 </div>

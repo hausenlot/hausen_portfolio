@@ -1,5 +1,9 @@
+
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import githubSvg from '/assets/github.svg';
+import linkedinSvg from '/assets/linkedin.svg';
+
 
 const Contact = () => {
     const form = useRef();
@@ -26,13 +30,13 @@ const Contact = () => {
             </div>
             <div className="box box-15 flex flex-col gap-2 justify-center items-center"> {/* github profile */}
                 <a href="https://github.com/hausenlot" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/github.svg" className="w-16 h-auto" alt="github icon" />
+                    <img src={githubSvg} className="w-16 h-auto" alt="github icon" />
                 </a>
                 <span className="text-base">Github Profile</span>
             </div>
             <div className="box box-16 flex flex-col justify-center items-center"> {/* A big linkedin button */}
                 <a href="https://www.linkedin.com/in/hauzn" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/linkedin.svg" className="w-8 h-auto" alt="linkedin icon" />
+                    <img src={linkedinSvg} className="w-8 h-auto" alt="linkedin icon" />
                 </a>
             </div>
             <div className="relative rounded-lg box-17 flex flex-col justify-center items-center"> {/* Label  */}

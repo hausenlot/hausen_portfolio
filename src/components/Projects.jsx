@@ -1,10 +1,15 @@
+
 import React from 'react';
+import project1Png from '/assets/project_1.png'
+import uiRepoPng from '/assets/ui_repo.png'
+import linkSvg from '/assets/link.svg'
+
 
 const Projects = () => {
     return (
         <div className="project-container">
             <div className="box box-8"> {/* 1st Project IMG */}
-                <img src="/assets/project_1.png" className="rounded-lg" alt="Project 1 Thumbnail" />
+                <img src={project1Png} className="rounded-lg" alt="Project 1 Thumbnail" />
             </div>
             <div className="box box-9"> {/* 1st Project Description */}
                 <div className="box-container p-2 md:hidden">
@@ -33,11 +38,11 @@ const Projects = () => {
             </div>
             <div className="box box-10 flex items-center justify-center"> {/* 1st Project Link */}
                 <a href="https://questlist.fly.dev" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/link.svg" alt="link icon" className="w-4 h-auto" />
+                    <img src={linkSvg} alt="link icon" className="w-4 h-auto" />
                 </a>
             </div>
             <div className="box box-11"> {/* 2nd Project IMG */}
-                <img src="/assets/ui_repo.png" className="rounded-lg" alt="Project 2 Thumbnail" />
+                <img src={uiRepoPng} className="rounded-lg" alt="Project 2 Thumbnail" />
             </div>
             <div className="box box-12"> {/* 2nd Project Description */}
                 <div className="box-container p-2 md:hidden">
@@ -64,7 +69,7 @@ const Projects = () => {
             </div>
             <div className="box box-13 flex items-center justify-center"> {/* 2nd Project Link */}
                 <a href="https://hausenlot.github.io/UI-Repo/" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/link.svg" alt="link icon" className="w-4 h-auto" />
+                    <img src={linkSvg} alt="link icon" className="w-4 h-auto" />
                 </a>
             </div>
         </div>
