@@ -12,7 +12,7 @@ const Home = () => {
                     <p className="font-thin text-sm mt-1 md:text-md sm:hidden ">
                         I call myself a Full-stack developer. I kinda wannabe one.
                     </p>
-                    <a href="/assets/CV NOV-24.pdf" download className="absolute bottom-5 hidden md:block">
+                    <a href="/assets/CV_NOV_24.pdf" download className="absolute bottom-5 hidden md:block">
                         <p>Download My Resume</p>
                     </a>
                 </div>
