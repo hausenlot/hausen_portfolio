@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply flex items-center justify-center font-sans bg-background min-h-screen w-screen overflow-hidden m-0;
+}
+
+.container {
+    @apply flex flex-col items-center
+}
+
+.nav-container {
+    @apply inline-flex rounded-lg border border-surface bg-surface p-1 mx-auto;
+}
+
+.nav-button {
+    @apply inline-block rounded-md px-4 py-2 text-sm text-primaryText focus:relative;
+}
+
+.nav-button.active {
+    @apply bg-accent shadow-sm;
+}
+
+.content-container {
+    width: min(90vw, 90vh);
+    @apply aspect-square;
+    /* @apply w-[clamp(300px,min(90vw,90vh),100%)] aspect-square p-4 */
+    /* Not gonna be lower that 300px width */
+}
+
+.home-container {
+    @apply w-full h-full grid grid-cols-10 grid-rows-10 gap-2 text-primaryText;
+}
+
+.icon-container {
+    @apply grid grid-cols-2 h-full;
+}
+
+.icon-wrapper {
+    @apply flex items-center justify-center;
+}
+
+.text-wrapper {
+    @apply flex items-center;
+}
+
+.icon {
+    @apply object-contain;
+}
+
+.box {
+    @apply bg-surface rounded-lg relative;
+    /* @apply transition-all duration-300 ease-in-out; */
+}
+
+.box-container {
+    @apply absolute inset-0 w-full h-full
+    /*overflow-auto;*/
+}
+
+.box-1 {
+    /* About Me */
+    @apply col-start-1 row-start-1 col-span-7 row-span-3 opacity-0;
+    animation: slideIn 1s ease-out 0s forwards;
+}
+
+.box-2 {
+    /* Video */
+    @apply col-start-8 row-start-1 col-span-3 row-span-5 opacity-0;
+    animation: fadeIn 1s ease-out 0.25s forwards;
+}
+
+.box-3 {
+    /* Quote */
+    @apply col-start-8 row-start-6 col-span-3 row-span-2 opacity-0;
+    animation: popOut 1s ease-out 0.1s forwards;
+}
+
+.box-4 {
+    /* Experience */
+    @apply col-start-4 row-start-8 col-span-7 row-span-3 opacity-0;
+    animation: slideOut 1s ease-out 0.1s forwards;
+}
+
+.box-5 {
+    /* Tech */
+    @apply col-start-1 row-start-6 col-span-3 row-span-5 opacity-0;
+    /*overflow-hidden;*/
+    animation: fadeOut 1s ease-out 0.25s forwards;
+}
+
+.box-6 {
+    /* Title */
+    @apply col-start-1 row-start-4 col-span-3 row-span-2 opacity-0;
+    animation: popOut 1s ease-out 0.1s forwards;
+}
+
+.box-7 {
+    /* Picture */
+    @apply col-start-4 row-start-4 col-span-4 row-span-4
+}
+
+.project-container {
+    @apply w-full h-full grid grid-cols-10 grid-rows-10 gap-2 text-primaryText;
+}
+
+.box-8 {
+    /* 1st Project IMG */
+    @apply col-start-1 row-start-1 col-span-5 row-span-5 opacity-0;
+    animation: popOut 1s ease-out .5s forwards;
+}
+
+.box-9 {
+    /* 1st Project Description */
+    @apply col-start-6 row-start-1 col-span-5 row-span-4 opacity-0;
+    animation: fadeIn .5s ease-out 0.15s forwards;
+}
+
+.box-10 {
+    /* 1st Project Link */
+    @apply col-start-6 row-start-5 col-span-5 row-span-1 opacity-0;
+    animation: fadeIn .5s ease-out .5s forwards;
+}
+
+.box-11 {
+    /* 2nd Project IMG */
+    @apply col-start-1 row-start-6 col-span-5 row-span-5 opacity-0;
+    animation: popOut 1s ease-out .5s forwards;
+}
+
+.box-12 {
+    /* 2nd Project Description */
+    @apply col-start-6 row-start-6 col-span-5 row-span-4 opacity-0;
+    animation: fadeIn .5s ease-out 0.15S forwards;
+}
+
+.box-13 {
+    /* 2nd Project Link */
+    @apply col-start-6 row-start-10 col-span-5 row-span-1 opacity-0;
+    animation: fadeIn .5s ease-out .5s forwards;
+}
+
+.contact-container {
+    @apply w-full h-full grid grid-cols-10 grid-rows-10 gap-2 text-primaryText;
+}
+
+.box-14 {
+    /* Personal Contact */
+    @apply col-start-1 row-start-1 col-span-5 row-span-2 opacity-0;
+    animation: slideIn .5s ease-out 0s forwards;
+}
+
+.box-15 {
+    /* github profile */
+    @apply col-start-6 row-start-1 col-span-5 row-span-5 opacity-0;
+    animation: slideIn .8s ease-out 0.2s forwards;
+}
+
+.box-16 {
+    /* A big linkedin button */
+    @apply col-start-1 row-start-3 col-span-5 row-span-2 opacity-0;
+    animation: fadeIn .8s ease-out .5s forwards;
+}
+
+.box-17 {
+    /* Label box */
+    @apply col-start-1 row-start-5 col-span-5 row-span-1 opacity-0;
+    animation: popOut .8s ease-out .6s forwards;
+}
+
+.box-18 {
+    /* Contact Box */
+    @apply col-start-1 row-start-6 col-span-10 row-span-5 opacity-0;
+    animation: fadeOut .8s ease-out .5s forwards;
+}
+
+.highlight {
+    @apply font-bold text-primaryText;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popOut {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
