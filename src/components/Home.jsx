@@ -1,10 +1,13 @@
 
 import React from 'react';
-import cvPdf from '/assets/CV_NOV_24.pdf'
+import cvPdf from '/assets/FULLSTACK22026.pdf'
 import roadMp4 from '/assets/road.mp4'
-import railsSvg from '/assets/rails.svg'
+import nodeSvg from '/assets/node.svg'
+import expressSvg from '/assets/express.svg'
+import reactSvg from '/assets/react.svg'
+import mongodbSvg from '/assets/mongodb.svg'
 import mysqlSvg from '/assets/mysql.svg'
-import jsSvg from '/assets/js.svg'
+import pythonSvg from '/assets/python.svg'
 import html5Svg from '/assets/html5.svg'
 import css3Svg from '/assets/css3.svg'
 import tailwindSvg from '/assets/tailwind.svg'
@@ -21,7 +24,7 @@ const Home = () => {
                         Hello! I'm Paul John Sopranes from Philippines, I call my self a Full Stack Developer. I'm an Undergraduate and self taught, it rough here but its fun.
                     </p>
                     <p className="font-thin text-sm mt-1 md:text-md sm:hidden ">
-                        I call myself a Full-stack developer. I kinda wannabe one.
+                        Nowadays, I solve problems and create solutions for the web.
                     </p>
                     <a href={cvPdf} download className="absolute bottom-5 hidden md:block">
                         <p>Download My Resume</p>
@@ -42,98 +45,86 @@ const Home = () => {
             </div>
             <div className="box box-3"> {/* Quote */}
                 <div className="box-container bg-accent rounded-lg p-2 px-4 flex justify-center text-center items-center">
-                    <span className="font-bold lg:hidden">Long road ahead</span>
+                    <span className="lg:hidden">¯\(ツ)/¯</span>
                     <span className="font-bold hidden lg:block">There is a long road ahead but I'll be there no matter what.</span>
                 </div>
             </div>
             <div className="box box-4"> {/* Experience */}
                 <div className="box-container p-2 text-xs">
                     <span className="hidden sm:block font-bold text-xl">Experience:</span>
-                    <span className="block font-bold text-sm md:text-xl">Computer Operator</span>
+                    <span className="block font-bold text-sm md:text-xl">Software Developer</span>
                     <div className="mt-1 text-secondaryText">
-                        <span className="block text-sm">City Govt. of Paranaque
-                            <span className="sm:hidden inline">HRMO</span>
-                            <span className="hidden sm:inline">Human Resources Mgmt. Dept.</span>
+                        <span className="block text-sm">ASG Platform
+                            {/* <span className="sm:hidden inline">HRMO</span>
+                            <span className="hidden sm:inline">Human Resources Mgmt. Dept.</span> */}
                         </span>
-                        <span className="block text-xs">2021-2024</span>
+                        <span className="block text-xs">2025-Present</span>
                         <span className="block text-xs md:text-base">
-                            <span className="hidden sm:inline">One of developers of HRMIS WebApp made mostly using </span>
+                            {/* <span className="hidden sm:inline">One of developers of HRMIS WebApp made mostly using </span>
                             <span className="inline sm:hidden">Made by using:</span>
                             <span className="font-bold text-primaryText">Rails 5</span> and
                             <span className="font-bold text-primaryText">MySQL</span>
+                             */}
+                            <span className="hidden sm:inline">I am making a very wide of range of applications. From traditional Full Stack development or AI Agents, Automation, Audio Engineering, 3D Rendering. I experienced all of it here</span>
                         </span>
                     </div>
                 </div>
             </div>
-            <div className="box relative box-5"> {/* Techs I use */}
-                <div className="box-container p-2 flex flex-col sm:hidden">
-                    <span className="text-xs font-bold hidden">Techs I use:</span>
-                    <div className="icon-container gap-0.5">
-                        <div className="icon-wrapper">
-                            <img src={railsSvg} alt="rails icon" className="icon w-5 h-auto" />
+            <div className="box relative box-5 overflow-hidden"> {/* Techs I use */}
+                <div className="box-container p-1 sm:p-3 flex flex-col items-center justify-center">
+                    <span className="hidden sm:block text-xs md:text-base font-bold mb-2 text-center leading-tight">Technologies I work with:</span>
+                    <div className="flex flex-wrap justify-center gap-1 sm:gap-2 md:gap-4 content-center h-full">
+                        {/* 1. Node */}
+                        <div className="flex flex-col items-center justify-center gap-0.5 md:gap-1 w-auto sm:w-8 md:w-12">
+                            <img src={nodeSvg} alt="node icon" className="w-5 h-5 sm:w-6 sm:h-6 md:w-10 md:h-10 object-contain" />
+                            <span className="text-[0.45rem] sm:text-[0.5rem] md:text-[0.6rem] font-medium">Node</span>
                         </div>
-                        <div className="text-wrapper">
-                            <span className="text-[0.60rem]">Rails</span>
+                        {/* 2. Express */}
+                        <div className="flex flex-col items-center justify-center gap-0.5 md:gap-1 w-auto sm:w-8 md:w-12">
+                            <img src={expressSvg} alt="express icon" className="w-5 h-5 sm:w-6 sm:h-6 md:w-10 md:h-10 object-contain text-white" style={{ filter: 'invert(1)' }} />
+                            <span className="text-[0.45rem] sm:text-[0.5rem] md:text-[0.6rem] font-medium">Express</span>
                         </div>
-                        <div className="icon-wrapper">
-                            <img src={mysqlSvg} alt="mysql icon" className="icon w-5 h-auto" />
+                        {/* 3. React */}
+                        <div className="flex flex-col items-center justify-center gap-0.5 md:gap-1 w-auto sm:w-8 md:w-12">
+                            <img src={reactSvg} alt="react icon" className="w-5 h-5 sm:w-6 sm:h-6 md:w-10 md:h-10 object-contain" />
+                            <span className="text-[0.45rem] sm:text-[0.5rem] md:text-[0.6rem] font-medium">React</span>
                         </div>
-                        <div className="text-wrapper">
-                            <span className="text-[0.60rem]">MySQL</span>
+                        {/* 4. Mongodb */}
+                        <div className="flex flex-col items-center justify-center gap-0.5 md:gap-1 w-auto sm:w-8 md:w-12">
+                            <img src={mongodbSvg} alt="mongodb icon" className="w-5 h-5 sm:w-6 sm:h-6 md:w-10 md:h-10 object-contain" />
+                            <span className="text-[0.45rem] sm:text-[0.5rem] md:text-[0.6rem] font-medium">Mongodb</span>
                         </div>
-                        <div className="icon-wrapper">
-                            <img src={jsSvg} alt="javascript icon" className="icon w-5 h-auto" />
+                        {/* 5. MySQL */}
+                        <div className="flex flex-col items-center justify-center gap-0.5 md:gap-1 w-auto sm:w-8 md:w-12">
+                            <img src={mysqlSvg} alt="mysql icon" className="w-5 h-5 sm:w-6 sm:h-6 md:w-10 md:h-10 object-contain" />
+                            <span className="text-[0.45rem] sm:text-[0.5rem] md:text-[0.6rem] font-medium">MySQL</span>
                         </div>
-                        <div className="text-wrapper">
-                            <span className="text-[0.50rem]">JavaScript</span>
+                        {/* 6. Python */}
+                        <div className="flex flex-col items-center justify-center gap-0.5 md:gap-1 w-auto sm:w-8 md:w-12">
+                            <img src={pythonSvg} alt="python icon" className="w-5 h-5 sm:w-6 sm:h-6 md:w-10 md:h-10 object-contain" />
+                            <span className="text-[0.45rem] sm:text-[0.5rem] md:text-[0.6rem] font-medium">Python</span>
                         </div>
-                        <div className="icon-wrapper">
-                            <img src={html5Svg} alt="html icon" className="icon w-5 h-auto" />
+                        {/* 7. HTML */}
+                        <div className="flex flex-col items-center justify-center gap-0.5 md:gap-1 w-auto sm:w-8 md:w-12">
+                            <img src={html5Svg} alt="html icon" className="w-5 h-5 sm:w-6 sm:h-6 md:w-10 md:h-10 object-contain" />
+                            <span className="text-[0.45rem] sm:text-[0.5rem] md:text-[0.6rem] font-medium">HTML</span>
                         </div>
-                        <div className="text-wrapper">
-                            <span className="text-[0.60rem]">HTML5</span>
+                        {/* 8. CSS */}
+                        <div className="flex flex-col items-center justify-center gap-0.5 md:gap-1 w-auto sm:w-8 md:w-12">
+                            <img src={css3Svg} alt="css icon" className="w-5 h-5 sm:w-6 sm:h-6 md:w-10 md:h-10 object-contain" />
+                            <span className="text-[0.45rem] sm:text-[0.5rem] md:text-[0.6rem] font-medium">CSS</span>
                         </div>
-                        <div className="icon-wrapper">
-                            <img src={css3Svg} alt="css icon" className="icon w-5 h-auto" />
-                        </div>
-                        <div className="text-wrapper">
-                            <span className="text-[0.60rem]">CSS3</span>
-                        </div>
-                        <div className="icon-wrapper">
-                            <img src={tailwindSvg} alt="tailwind icon" className="icon w-5 h-auto" />
-                        </div>
-                        <div className="text-wrapper">
-                            <span className="text-[0.60rem]">Tailwind</span>
-                        </div>
-                    </div>
-                </div>
-                <div className="box-container p-4 sm:flex flex-col hidden">
-                    <span className="text-base font-bold">Technologies I work with:</span>
-                    <div className="icon-container gap-2">
-                        <div className="icon-wrapper">
-                            <img src={railsSvg} alt="rails icon" className="icon w-10 h-auto" />
-                        </div>
-                        <div className="icon-wrapper">
-                            <img src={mysqlSvg} alt="mysql icon" className="icon w-10 h-auto" />
-                        </div>
-                        <div className="icon-wrapper">
-                            <img src={jsSvg} alt="javascript icon" className="icon w-10 h-auto" />
-                        </div>
-                        <div className="icon-wrapper">
-                            <img src={html5Svg} alt="html icon" className="icon w-10 h-auto" />
-                        </div>
-                        <div className="icon-wrapper">
-                            <img src={css3Svg} alt="css icon" className="icon w-10 h-auto" />
-                        </div>
-                        <div className="icon-wrapper">
-                            <img src={tailwindSvg} alt="tailwind icon" className="icon w-10 h-auto" />
+                        {/* 9. Tailwind */}
+                        <div className="flex flex-col items-center justify-center gap-0.5 md:gap-1 w-auto sm:w-8 md:w-12">
+                            <img src={tailwindSvg} alt="tailwind icon" className="w-5 h-5 sm:w-6 sm:h-6 md:w-10 md:h-10 object-contain" />
+                            <span className="text-[0.45rem] sm:text-[0.5rem] md:text-[0.6rem] font-medium">Tailwind</span>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="box box-6">  {/* Title */}
                 <div className="box-container bg-accent rounded-lg p-2 px-4 flex justify-center items-center text-center">
-                    <span className="font-bold text-sm sm:text-lg">Junior Web Developer</span>
+                    <span className="font-bold text-sm sm:text-lg">Software Engineer</span>
                 </div>
             </div>
             <div className="box box-7">  {/* Picture */}

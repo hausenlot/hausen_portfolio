@@ -112,8 +112,8 @@ body {
 }
 
 .box-9 {
-    /* 1st Project Description */
-    @apply col-start-6 row-start-1 col-span-5 row-span-4 opacity-0;
+    /* 1st Project Description - expanded to include link */
+    @apply col-start-6 row-start-1 col-span-5 row-span-5 opacity-0;
     animation: fadeIn .5s ease-out 0.15s forwards;
 }
 
@@ -130,8 +130,8 @@ body {
 }
 
 .box-12 {
-    /* 2nd Project Description */
-    @apply col-start-6 row-start-6 col-span-5 row-span-4 opacity-0;
+    /* 2nd Project Description - expanded to include link */
+    @apply col-start-6 row-start-6 col-span-5 row-span-5 opacity-0;
     animation: fadeIn .5s ease-out 0.15S forwards;
 }
 
@@ -139,6 +139,153 @@ body {
     /* 2nd Project Link */
     @apply col-start-6 row-start-10 col-span-5 row-span-1 opacity-0;
     animation: fadeIn .5s ease-out .5s forwards;
+}
+
+/* ===== NEW PROJECTS BENTO GRID ===== */
+.projects-bento-grid {
+    @apply w-full h-full grid gap-2 text-primaryText;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+.project-card {
+    @apply relative overflow-hidden rounded-lg cursor-pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.project-card__image {
+    @apply w-full h-full object-cover;
+}
+
+.project-card__overlay {
+    @apply absolute inset-0 flex flex-col justify-end p-3;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+}
+
+.project-card__title {
+    @apply text-sm font-bold text-primaryText mb-1 truncate;
+}
+
+.project-card__tech {
+    @apply flex flex-wrap gap-1 mb-2;
+}
+
+.project-card__tech-tag {
+    @apply text-[10px] bg-background/80 px-1.5 py-0.5 rounded text-primaryText;
+}
+
+.project-card__description {
+    @apply text-xs text-secondaryText opacity-0 max-h-0 overflow-hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.project-card:hover .project-card__description {
+    @apply opacity-100;
+    max-height: 100px;
+}
+
+.project-card__links {
+    @apply absolute top-2 right-2 flex gap-2 opacity-0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-card__links {
+    @apply opacity-100;
+}
+
+.project-card__link {
+    @apply w-6 h-6 bg-background/80 rounded-full flex items-center justify-center;
+    transition: background-color 0.2s ease;
+}
+
+.project-card__link:hover {
+    @apply bg-accent;
+}
+
+.project-card__link img {
+    @apply w-3 h-3;
+}
+
+/* Featured project (larger) */
+.project-card--featured {
+    grid-column: span 5;
+    grid-row: span 6;
+}
+
+.project-card--featured .project-card__title {
+    @apply text-lg;
+}
+
+.project-card--featured .project-card__tech-tag {
+    @apply text-xs px-2 py-1;
+}
+
+.project-card--featured .project-card__description {
+    @apply text-sm;
+}
+
+/* Medium cards */
+.project-card--medium {
+    grid-column: span 5;
+    grid-row: span 3;
+}
+
+/* Small cards */
+.project-card--small {
+    grid-column: span 2;
+    grid-row: span 4;
+}
+
+.project-card--small-wide {
+    grid-column: span 3;
+    grid-row: span 4;
+}
+
+/* Placeholder styling */
+.project-card--placeholder {
+    @apply bg-surface flex items-center justify-center;
+}
+
+.project-card--placeholder::after {
+    content: 'Coming Soon';
+    @apply text-tertiaryText text-sm font-medium;
+}
+
+/* Animation delays for staggered entrance */
+.project-card:nth-child(1) {
+    animation: popOut 0.5s ease-out 0.1s forwards;
+    opacity: 0;
+}
+
+.project-card:nth-child(2) {
+    animation: fadeIn 0.5s ease-out 0.2s forwards;
+    opacity: 0;
+}
+
+.project-card:nth-child(3) {
+    animation: fadeIn 0.5s ease-out 0.3s forwards;
+    opacity: 0;
+}
+
+.project-card:nth-child(4) {
+    animation: popOut 0.5s ease-out 0.4s forwards;
+    opacity: 0;
+}
+
+.project-card:nth-child(5) {
+    animation: popOut 0.5s ease-out 0.5s forwards;
+    opacity: 0;
+}
+
+.project-card:nth-child(6) {
+    animation: fadeIn 0.5s ease-out 0.6s forwards;
+    opacity: 0;
 }
 
 .contact-container {
@@ -177,6 +324,27 @@ body {
 
 .highlight {
     @apply font-bold text-primaryText;
+}
+
+/* Architecture Card Styles */
+.arch-card {
+    @apply h-full flex flex-col;
+}
+
+.arch-header {
+    @apply text-lg font-bold text-accent border-b border-surface pb-2 mb-2;
+}
+
+.arch-desc {
+    @apply text-sm text-secondaryText mb-3 flex-grow;
+}
+
+.arch-stack {
+    @apply flex flex-wrap gap-2;
+}
+
+.arch-tech {
+    @apply text-xs bg-background px-2 py-1 rounded-md text-primaryText;
 }
 
 .hidden {
